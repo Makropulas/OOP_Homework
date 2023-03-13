@@ -10,9 +10,9 @@ public class GeoTree {
     }
 
     public void append(Person person1, Relationship rel, Person person2) {
-        if(rel == Relationship.parent){
-            tree.add(new Node(person1, Relationship.parent, person2));
-            tree.add(new Node(person2, Relationship.children, person1));
+        if(rel == Relationship.children){
+            tree.add(new Node(person1, Relationship.children, person2));
+            tree.add(new Node(person2, Relationship.parent, person1));
         }
         if(rel == Relationship.spouse){
             if(person1.getSex().equals(person2.getSex()))

@@ -11,15 +11,16 @@ public class Main {
         Person anton = new Person("Антон", "муж");
         GeoTree gt = new GeoTree();
         gt.append(dmitriy, Relationship.spouse, tsira);
-        gt.append(dmitriy, Relationship.parent, vova);
-        gt.append(tsira, Relationship.parent, vova);
-        gt.append(dmitriy, Relationship.parent, vitalik);
-        gt.append(tsira, Relationship.parent, vitalik);
-        gt.append(dmitriy, Relationship.parent, slava);
-        gt.append(tsira, Relationship.parent, slava);
-        gt.append(dmitriy, Relationship.parent, vitya);
-        gt.append(tsira, Relationship.parent, vitya);
-        gt.append(dmitriy, Relationship.parent, anton);
+        gt.append(dmitriy, Relationship.children, vova);
+        gt.append(tsira, Relationship.children, vova);
+        gt.append(dmitriy, Relationship.children, vitalik);
+        gt.append(tsira, Relationship.children, vitalik);
+        gt.append(dmitriy, Relationship.children, slava);
+        gt.append(tsira, Relationship.children, slava);
+        gt.append(dmitriy, Relationship.children, vitya);
+        gt.append(tsira, Relationship.children, vitya);
+        gt.append(dmitriy, Relationship.children, anton);
+        gt.append(tsira, Relationship.children, anton);
         gt.append(vova, Relationship.brother, vitalik);
         gt.append(vova, Relationship.brother, slava);
         gt.append(vova, Relationship.brother, vitya);
@@ -31,8 +32,10 @@ public class Main {
         gt.append(slava, Relationship.brother, anton);
         gt.append(vitya, Relationship.brother, anton);
 
-        System.out.println(new Reserch(gt).spend(dmitriy,
-                Relationship.spouse));
+        System.out.println("Моя супруга " + new Reserch(gt).spend(dmitriy, Relationship.spouse));
+        System.out.println("Мои дети " + new Reserch(gt).spend(dmitriy, Relationship.children));
+        System.out.println("Братья Вовы " + new Reserch(gt).spend(vova, Relationship.brother));
+        System.out.println("Родители Вовы " + new Reserch(gt).spend(vova, Relationship.parent));
     }
 
 }
