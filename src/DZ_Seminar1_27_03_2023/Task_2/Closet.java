@@ -1,4 +1,4 @@
-package DZ_Seminar1_02_03_2023.Task_2;
+package DZ_Seminar1_27_03_2023.Task_2;
 
 public class Closet {
     private boolean door;

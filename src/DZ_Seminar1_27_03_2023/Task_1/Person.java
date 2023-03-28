@@ -1,11 +1,12 @@
-package DZ_Seminar1_02_03_2023.Task_1;
+package DZ_Seminar1_27_03_2023.Task_1;
 
 public class Person {
 
-    private String sex;
     private String fullName;
+    private Sex sex;
 
-    public Person(String fullName, String sex) {
+
+    public Person(String fullName, Sex sex) {
         this.fullName = fullName;
         this.sex = sex;
     }
@@ -14,7 +15,7 @@ public class Person {
         return fullName;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 }

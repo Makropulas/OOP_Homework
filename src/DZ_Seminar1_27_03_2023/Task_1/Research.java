@@ -1,12 +1,12 @@
-package DZ_Seminar1_02_03_2023.Task_1;
+package DZ_Seminar1_27_03_2023.Task_1;
 
 import java.util.ArrayList;
 
-public class Reserch {
+public class Research {
     ArrayList<String> result = new ArrayList<>();
     ArrayList<Node> tree;
 
-    public Reserch(GeoTree geoTree) {
+    public Research(GeoTree geoTree) {
         tree = geoTree.getTree();
     }
 
@@ -18,5 +18,4 @@ public class Reserch {
         }
         return result;
     }
-
 }

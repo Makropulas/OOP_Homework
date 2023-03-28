@@ -1,4 +1,4 @@
-package DZ_Seminar1_02_03_2023.Task_3;
+package DZ_Seminar1_27_03_2023.Task_3;
 
 public class Main {
     public static void main(String[] args) {

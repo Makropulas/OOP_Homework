@@ -1,14 +1,14 @@
-package DZ_Seminar1_02_03_2023.Task_1;
+package DZ_Seminar1_27_03_2023.Task_1;
 
 public class Main {
     public static void main(String[] args) {
-        Person dmitriy = new Person("Дмитрий", "муж");
-        Person tsira = new Person("Цира", "жен");
-        Person vova = new Person("Вова", "муж");
-        Person vitalik = new Person("Виталик", "муж");
-        Person slava = new Person("Слава", "муж");
-        Person vitya = new Person("Витя", "муж");
-        Person anton = new Person("Антон", "муж");
+        Person dmitriy = new Person("Дмитрий", Sex.male);
+        Person tsira = new Person("Цира", Sex.female);
+        Person vova = new Person("Вова", Sex.male);
+        Person vitalik = new Person("Виталик", Sex.male);
+        Person slava = new Person("Слава", Sex.male);
+        Person vitya = new Person("Витя", Sex.male);
+        Person anton = new Person("Антон", Sex.male);
         GeoTree gt = new GeoTree();
         gt.append(dmitriy, Relationship.spouse, tsira);
         gt.append(dmitriy, Relationship.children, vova);
@@ -32,10 +32,9 @@ public class Main {
         gt.append(slava, Relationship.brother, anton);
         gt.append(vitya, Relationship.brother, anton);
 
-        System.out.println("Моя супруга " + new Reserch(gt).spend(dmitriy, Relationship.spouse));
-        System.out.println("Мои дети " + new Reserch(gt).spend(dmitriy, Relationship.children));
-        System.out.println("Братья Вовы " + new Reserch(gt).spend(vova, Relationship.brother));
-        System.out.println("Родители Вовы " + new Reserch(gt).spend(vova, Relationship.parent));
+        System.out.println("Моя супруга " + new Research(gt).spend(dmitriy, Relationship.spouse));
+        System.out.println("Мои дети " + new Research(gt).spend(dmitriy, Relationship.children));
+        System.out.println("Братья Вовы " + new Research(gt).spend(vova, Relationship.brother));
+        System.out.println("Родители Вовы " + new Research(gt).spend(vova, Relationship.parent));
     }
-
 }
