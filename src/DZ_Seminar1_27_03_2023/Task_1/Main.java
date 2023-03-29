@@ -35,6 +35,8 @@ public class Main {
         System.out.println("Моя супруга " + new Research(gt).spend(dmitriy, Relationship.spouse));
         System.out.println("Мои дети " + new Research(gt).spend(dmitriy, Relationship.children));
         System.out.println("Братья Вовы " + new Research(gt).spend(vova, Relationship.brother));
-        System.out.println("Родители Вовы " + new Research(gt).spend(vova, Relationship.parent));
+        System.out.println("Родители Вовы " + new Research(gt).spend(vova, Relationship.parent) + "\n");
+        System.out.println("Все женщины в семье " + new Research(gt).gender(Sex.female));
+        System.out.println("Все мужчины в семье " + new Research(gt).gender(Sex.male));
     }
 }

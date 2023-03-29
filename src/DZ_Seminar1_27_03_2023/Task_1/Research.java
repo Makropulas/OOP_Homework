@@ -1,6 +1,7 @@
 package DZ_Seminar1_27_03_2023.Task_1;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Research {
     ArrayList<String> result = new ArrayList<>();
@@ -17,5 +18,13 @@ public class Research {
             }
         }
         return result;
+    }
+    public HashSet<String> gender(Sex sex) {
+        for (Node t : tree) {
+            if (t.getP1().getSex().equals(sex)) {
+                result.add(t.getP1().getFullName());
+            }
+        }
+        return new HashSet<>(result);
     }
 }
