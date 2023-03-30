@@ -1,4 +1,4 @@
-package DZ_Seminar1_27_03_2023.Task_3;
+package Task_3;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package DZ_Seminar1_27_03_2023.Task_1;
+package Task_1;
 
 import java.util.ArrayList;
 import java.util.HashSet;
