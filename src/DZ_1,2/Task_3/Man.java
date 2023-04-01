@@ -1,18 +1,16 @@
 package Task_3;
 
-public class Man {
-    private String name;
+public class Man extends Human {
+    public Man(String name, String surname) {
+        super(name, surname);
+    }
 
     public Man(String name) {
-        this.name = name;
+        this(name, "");
     }
 
     public Man() {
         this("Человек");
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void callingCat(Cat cat) {
@@ -21,7 +19,7 @@ public class Man {
     }
 
     public void petTheCat(Cat cat) {
-        System.out.println(name + " гладит питомца по имени " + cat.getName());
+        System.out.println(getName() + " гладит питомца по имени " + cat.getName());
         cat.emotion();
     }
 }

@@ -2,27 +2,19 @@ package Task_3;
 
 import java.util.Random;
 
-public class Cat {
-    private String name;
+public class Cat extends Animal implements Emotion {
     Random random = new Random();
 
     public Cat(String name) {
-        this.name = name;
-    }
-
-    public Cat() {
-        this("Кошка");
-    }
-
-    public String getName() {
-        return name;
+        super(name);
     }
 
     public void runToOwner() {
-        System.out.println(random.nextBoolean() ? name + " бежит к хозяину" : "Игнорирует хозяина");
+        System.out.println(random.nextBoolean() ? getName() + " бежит к хозяину" : "Игнорирует хозяина");
 
     }
 
+    @Override
     public void emotion() {
         int num = random.nextInt(3);
         String emotion;
@@ -32,6 +24,6 @@ public class Cat {
             case 2 -> emotion = " царапается и кусается";
             default -> emotion = " ничего не делает";
         }
-        System.out.println(name + emotion);
+        System.out.println(getName() + emotion);
     }
 }
