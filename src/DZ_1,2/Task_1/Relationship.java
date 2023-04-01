@@ -13,17 +13,10 @@ public enum Relationship {
             return parent;
         }
     },
-    spouse {
-        @Override
-        public Relationship getInverseRelationship() {
-            return spouse;
-        }
-    },
-    sibling {
-        @Override
-        public Relationship getInverseRelationship() {
-            return sibling;
-        }
-    };
-    public abstract Relationship getInverseRelationship();
+    spouse,
+    sibling;
+
+    public Relationship getInverseRelationship() {
+        return Relationship.valueOf(name());
+    }
 }

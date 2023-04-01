@@ -8,7 +8,7 @@ public class Research {
     ArrayList<Node> tree;
 
     public Research(GeoTree geoTree) {
-        tree = geoTree.getTree();
+        tree = geoTree.TREE;
     }
 
     public ArrayList<String> spend(Person p, Relationship re) {
