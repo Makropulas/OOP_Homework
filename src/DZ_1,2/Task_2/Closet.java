@@ -1,35 +1,36 @@
 package Task_2;
 
-public class Closet {
+public class Closet extends Furniture implements IsDoor {
     private boolean door;
-    private String name;
 
     public Closet(String name) {
-        this.name = name;
+        super(name);
     }
 
     public Closet() {
         this("Шкаф");
     }
 
+    @Override
     public void openDoor(String peopleName) {
-        if(door) System.out.println(peopleName + " не смог открыть открытую дверь!");
+        if (door) System.out.println(peopleName + " хотел открыть дверь. Смотрит на " + getName() + ", а дверь уже открыта!");
         else {
             door = true;
-            System.out.println(peopleName + " открыл дверь");
+            System.out.println(peopleName + " открывает " + getName() + ". " + isDoor());
         }
     }
 
+    @Override
     public void closeDoor(String peopleName) {
-        if(!door) System.out.println(peopleName + " не смог закрыть закрытую дверь!");
+        if (!door) System.out.println(peopleName + " хотел закрыть дверь. Смотрит на " + getName() + ", а дверь итак закрыта!");
         else {
             door = false;
-            System.out.println(peopleName + " закрыл дверь");
+            System.out.println(peopleName + " закрывает " + getName() + ". " + isDoor());
         }
     }
 
-    public void isDoor() {
-        if(door) System.out.println(name + ". Дверь открыта");
-        else System.out.println(name + ". Дверь закрыта");
+    @Override
+    public String isDoor() {
+        return door ? "Дверь открыта" : "Дверь закрыта" ;
     }
 }
