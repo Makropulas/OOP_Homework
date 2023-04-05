@@ -3,7 +3,7 @@ package Task_1;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Research {
+public class Research{
     ArrayList<String> result = new ArrayList<>();
     ArrayList<Node> tree;
 
@@ -13,7 +13,7 @@ public class Research {
 
     public ArrayList<String> spend(Person p, Relationship re) {
         for (Node t : tree) {
-            if (t.getP1().getFullName().equals(p.getFullName())  && t.getRe() == re) {
+            if ((t.getP1().compareTo(p) == 0)  && (t.getRe() == re)) {
                 result.add(t.getP2().getFullName());
             }
         }

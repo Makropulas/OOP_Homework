@@ -1,6 +1,6 @@
 package Task_3;
 
-public abstract class Animal {
+public abstract class Animal implements Emotion {
     private String name;
 
     public Animal(String name) {

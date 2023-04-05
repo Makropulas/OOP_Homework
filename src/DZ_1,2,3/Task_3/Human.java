@@ -1,6 +1,6 @@
 package Task_3;
 
-public abstract class Human extends Animal {
+public abstract class Human extends Animal{
     private String surname;
     public Human(String name, String surname) {
         super(name);

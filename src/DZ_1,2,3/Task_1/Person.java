@@ -1,6 +1,6 @@
 package Task_1;
 
-public class Person {
+public class Person implements Comparable<Person> {
 
     private String fullName;
     private Sex sex;
@@ -17,5 +17,10 @@ public class Person {
 
     public Sex getSex() {
         return sex;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.fullName.compareTo(o.fullName);
     }
 }

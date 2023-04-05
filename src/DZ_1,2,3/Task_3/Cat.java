@@ -2,7 +2,7 @@ package Task_3;
 
 import java.util.Random;
 
-public class Cat extends Animal implements Emotion {
+public class Cat extends Animal{
     Random random = new Random();
 
     public Cat(String name) {
