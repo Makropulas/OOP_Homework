@@ -1,10 +1,20 @@
 package Task_3;
 
-public abstract class Human extends Animal{
+public abstract class Human implements Emotion {
+    private String name;
     private String surname;
+
     public Human(String name, String surname) {
-        super(name);
+        this.name = name;
         this.surname = surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSurname() {
