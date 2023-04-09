@@ -1,8 +1,5 @@
 package Task_2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         People people = new People("Сергей");
