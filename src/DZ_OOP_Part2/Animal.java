@@ -1,4 +1,4 @@
-public abstract class Animal implements Voice, Emotion {
+public abstract class Animal implements Emotion {
 
     private String name, type, color;
     private int age, weight;

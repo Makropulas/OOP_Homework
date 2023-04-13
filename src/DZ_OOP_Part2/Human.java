@@ -1,4 +1,4 @@
-public abstract class Human implements Action, Emotion {
+public abstract class Human implements ActionWithAnimals, Emotion {
     private String name, role;
     private int age;
     private Gender gender;
