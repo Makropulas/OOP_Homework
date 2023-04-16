@@ -1,11 +1,11 @@
 public abstract class Animal implements Emotion {
 
     private String name, type, color;
-    private int age, weight;
+    private Number age, weight;
     private Gender gender;
 
 
-    public Animal(String name, String type, String color, Gender gender, int age, int weight) {
+    public Animal(String name, String type, String color, Gender gender, Number age, Number weight) {
         this.name = name;
         this.type = type;
         this.color = color;
@@ -34,7 +34,7 @@ public abstract class Animal implements Emotion {
         return gender;
     }
 
-    public int getAge() {
+    public Number getAge() {
         return age;
     }
 
@@ -42,7 +42,7 @@ public abstract class Animal implements Emotion {
         this.age = age;
     }
 
-    public int getWeight() {
+    public Number getWeight() {
         return weight;
     }
 
@@ -61,6 +61,4 @@ public abstract class Animal implements Emotion {
                 ", Вес: " + weight +
                 '}';
     }
-
-
 }

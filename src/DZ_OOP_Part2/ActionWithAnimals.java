@@ -1,3 +1,3 @@
 public interface ActionWithAnimals {
-    void action(Pets<Animal> animals);
+    void action(Pets animals);
 }

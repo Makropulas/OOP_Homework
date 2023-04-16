@@ -4,7 +4,7 @@ public class Owner extends Human {
     }
 
     @Override
-    public void action(Pets<Animal> pets) {
+    public void action(Pets pets) {
         if (pets.animals.size() < 1) System.out.println(getName() + " грустит. У него нет питомца");
         else {
             if (pets.animals.size() == 1) System.out.println(getName() + " везёт в клинику своего питомца по имени " + pets);

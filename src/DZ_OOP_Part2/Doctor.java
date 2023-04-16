@@ -4,7 +4,7 @@ public class Doctor extends Human {
     }
 
     @Override
-    public void action(Pets<Animal> pets) {
+    public void action(Pets pets) {
         if (pets.animals.size() < 1) System.out.println(getName() + " отдыхает");
         else {
             int num = Randomizer.getRandom(0);
